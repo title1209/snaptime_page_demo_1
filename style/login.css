@@ -5,6 +5,7 @@ footer {
 
 main {
     display: flex;
+    height:900px;
     flex-direction: row;
     justify-content: center;
     align-items: center;

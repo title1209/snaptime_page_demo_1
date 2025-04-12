@@ -1,0 +1,51 @@
+body {
+    background: #fefefe;
+    font-family: "Pretendard", sans-serif;
+    padding: 2rem;
+  }
+  
+  .contact-box {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    transition: all 0.3s ease;
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.7s ease forwards;
+  }
+  
+  .input-slide {
+    animation: slideIn 0.5s ease forwards;
+  }
+  
+  .button-pop {
+    transition: transform 0.2s ease;
+  }
+  .button-pop:hover {
+    transform: scale(1.05);
+  }
+  
+  .success-popup {
+    margin-top: 1rem;
+    background: #dfffe2;
+    color: #227744;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  

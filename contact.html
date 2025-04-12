@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.lime.min.css">
+        <title>snaptime</title>
+        <link rel="stylesheet" href="./style/main_style.css">
+        <link rel="stylesheet" href="./style/contact_style.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="./script/contact.js" defer></script>
+    </head>
+    <body>
+        <div id="all">
+            <header>
+                <nav class="container">                                              
+                    <ul>
+                        <li><strong>SNAPTIME</strong></li>
+                    </ul>
+                    <ul>
+                        <li><a href="./index.html" class="contrast">Home</a></li>
+                        <li><a href="./character.html" class="contrast">Characters</a></li>
+                        <li><a href="./brand.html" class="contrast">Brand</a></li>
+                        <li><a href="./login.html" class="contrast">Login</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main class="container">
+                <h2>Contact Us</h2>
+                <form id="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required autocomplete="off">
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required autocomplete="off">
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required autocomplete="off"></textarea>
+                    
+                    <button type="submit" class="contrast">Send ✉️</button>
+                </form>
+                <!-- CDN 추가 (head 또는 body 끝) -->
+                <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+                <script>
+                // 초기화
+                emailjs.init("f_N1AuZRddtLuBjwz");
+
+                // 폼 제출 이벤트 처리
+                document.getElementById("contact-form").addEventListener("submit", function (e) {
+                    e.preventDefault();
+
+                    emailjs.sendForm("service_6x5ot6p", "template_dbbf3jt", this)
+                    .then(function () {
+                        alert("메일이 성공적으로 전송되었습니다!");
+                    }, function (error) {
+                        alert("메일 전송 실패 😢\n" + JSON.stringify(error));
+                    });
+
+                    // 폼 초기화
+                    this.reset();
+                });
+                </script>
+
+            </main>
+            <footer>
+                <div class="container">
+                    <p>SNAPTIME &copy; 2024</p>
+                    <p>Made with 🐚 by title</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.lime.min.css">
+        <title>snaptime</title>
+        <link rel="stylesheet" href="./style/main_style.css">
+        <link rel="stylesheet" href="./style/login.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <div id="all">
+            <header>
+                <nav class="container">                                              
+                    <ul>
+                        <li><strong>SNAPTIME</strong></li>
+                    </ul>
+                    <ul>
+                        <li><a href="./index.html" class="contrast">Home</a></li>
+                        <li><a href="./character.html" class="contrast">Characters</a></li>
+                        <li><a href="./brand.html" class="contrast">Brand</a></li>
+                        <li><a href="./login.html" class="contrast">Login</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main class="container">
+                <section>
+                    <h2>Login</h2>
+                    <form action="/login" method="post">
+                        <fieldset>
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" name="username" placeholder="Username" autocomplete="given-name" required>
+                            
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" placeholder="Password" autocomplete="password" required>
+                        </fieldset>
+                        <input type="submit" value="Login">
+                    </form>
+                    <p>Don't have an account? <a href="./signup.html">Register here</a>.</p>
+                </section>
+            </main>
+            <footer>
+                <div class="container">
+                    <p>SNAPTIME &copy; 2024</p>
+                    <p>Made with 🐚 by title</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

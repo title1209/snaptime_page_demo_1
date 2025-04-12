@@ -1,0 +1,18 @@
+footer {
+    position: absolute;
+    bottom: 0px;
+}
+
+main {
+    display: flex;
+    height:900px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    box-sizing: border-box;
+    width:1200px;
+    padding: 40px;
+}
